@@ -59,7 +59,7 @@ function smg_most_recent( $content ) {
                     <span class="smg-rp-cat">' . $recent_cat . '</span>
                     <span class="smg-rp-time mobile-only"> | <i>' . $recent_timestamp  . '</i></span>
                 </div>
-                <span class="smg-rp-h1">' . get_the_title( $recent_post_id ) . '</span>
+                <span class="smg-rp-h1"><a href="' . get_permalink( $recent_post_id ) . '">' . get_the_title( $recent_post_id ) . '</a></span>
                 <span class="smg-rp-meta tablet-up">By: <a href="' . get_author_posts_url( $recent_author_id ) . '">' . $recent_author_name . '</a> <i>' .  $recent_timestamp . '</i></span>
             </div>
         ';

@@ -12,6 +12,11 @@
 
 }
 
+.smg-rp-container a {
+
+	box-shadow: none !important;
+}
+
 .smg-img-container {
 
 	border-radius: 3px;
@@ -109,10 +114,8 @@
 		margin-top: 5px;
 	}
 
-	.smg-rp-meta a {
+	.smg-rp-meta a, .smg-rp-meta a:hover {
 
-		box-shadow: 0 -1px 0 red inset !important;
-		color: red;
-		text-decoration: red !important;
+			color: red !important;
 	}
 }
