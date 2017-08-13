@@ -51,14 +51,14 @@ function smg_most_recent( $content ) {
         $recent_post_html = '
 
         	<div class="smg_rp_container">
-        	<span class="smg_img_container">' . get_the_post_thumbnail( $recent_post['ID'], 'smg_img') . '</span>
-        	<div class="smg_rp_cat_container">
-                <span class="smg_rp_cat">' 	. $the_category . '</span>
-        	   <span class="smg_rp_time mobile-only"> | <i>' . $timestamp  . '</i></span>
+            <span class="smg-img-container">' . get_the_post_thumbnail( $recent_post['ID'], 'smg_img') . '</span>
+            <div class="smg-rp-cat-container">
+                <span class="smg-rp-cat">'  . $the_category . '</span>
+               <span class="smg-rp-time mobile-only"> | <i>' . $timestamp  . '</i></span>
             </div>
-        	<span class="smg_rp_h1">' 	. $recent_post['post_title'] . '</span>
-			<span class="smg_rp_meta tablet-up">By: <a href="'. get_author_posts_url( $author_id ) .'">'. $author_name .'</a> <i>'.  $timestamp .'</i></span>
-        	</div>
+            <span class="smg-rp-h1">'   . $recent_post['post_title'] . '</span>
+            <span class="smg-rp-meta tablet-up">By: <a href="'. get_author_posts_url( $author_id ) .'">'. $author_name .'</a> <i>'.  $timestamp .'</i></span>
+            </div>
 
         ';
 

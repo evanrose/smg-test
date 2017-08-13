@@ -3,7 +3,7 @@
 	display: none;
 }
 
-.smg_rp_container {
+.smg-rp-container {
 
 	border: 1px solid #eee;
 	color: #bbb;
@@ -12,7 +12,7 @@
 
 }
 
-.smg_img_container {
+.smg-img-container {
 
 	display: inline-block;
 	width: 100px;
@@ -24,7 +24,7 @@
 	border-radius: 3px;
 }
 
-.smg_img_container img {
+.smg-img-container img {
 
     height: auto;
     margin-left: -50%;
@@ -33,14 +33,14 @@
 
 }
 
-.smg_rp_cat_container {
+.smg-rp-cat-container {
 
 	display: inline-block;
 	line-height: 12px;
 	vertical-align: top;
 }
 
-.smg_rp_cat {
+.smg-rp-cat {
 
 	font-size: 9px;	
 	font-weight: bold;
@@ -48,13 +48,13 @@
 
 }
 
-.smg_rp_time {
+.smg-rp-time {
 
 	color: #999;
 	font-size: 9px;
 }
 
-.smg_rp_h1 {
+.smg-rp-h1 {
 
 	color: #333;
 	display: block;
@@ -65,13 +65,13 @@
 
 @media (min-width: 728px) { 
 
-	.smg_img_container {
+	.smg-img-container {
 
 		height: 150px;
 		width: 186px;
 	}
 
-	.smg_img_container img {
+	.smg-img-container img {
 
 		left: 0;
 	    position: relative;
@@ -89,24 +89,24 @@
 		display: block;
 	}
 
-	.smg_rp_cat {
+	.smg-rp-cat {
 
 		padding-top: 5px;
 	}
 
-	.smg_rp_h1 {
+	.smg-rp-h1 {
 
 		font-size: 26px;
 	}
 
-	.smg_rp_meta {
+	.smg-rp-meta {
 
 		font-size: 13px;
 		line-height: 22px;
 		margin-top: 5px;
 	}
 
-	.smg_rp_meta a {
+	.smg-rp-meta a {
 
 		box-shadow: 0 -1px 0 red inset !important;
 		color: red;
