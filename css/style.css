@@ -14,14 +14,14 @@
 
 .smg-img-container {
 
+	border-radius: 3px;
 	display: inline-block;
-	width: 100px;
+	float: left;
+	height: 100px;
 	margin: 0 15px 0 0;
 	overflow: hidden;
 	position: relative;
-	height: 100px;
-	float: left;
-	border-radius: 3px;
+	width: 100px;
 }
 
 .smg-img-container img {
@@ -86,10 +86,16 @@
 	.smg-img-container img {
 
 		left: 0;
+	    margin-left: 0;
 	    position: relative;
 	    top: 0;
-		margin-left: 0;
 	}
+
+	.smg-rp-cat-container {
+
+		margin: 15px 0 5px 0
+	}
+
 
 	.smg-rp-h1 {
 
@@ -109,5 +115,4 @@
 		color: red;
 		text-decoration: red !important;
 	}
-
 }
