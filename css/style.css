@@ -65,6 +65,16 @@
 
 @media (min-width: 728px) { 
 
+	.mobile-only {
+
+		display: none;
+	}
+	
+	.tablet-up {
+
+		display: block;
+	}
+
 	.smg-img-container {
 
 		height: 150px;
@@ -77,16 +87,6 @@
 	    position: relative;
 	    top: 0;
 		margin-left: 0;
-	}
-
-	.mobile-only {
-
-		display: none;
-	}
-	
-	.tablet-up {
-
-		display: block;
 	}
 
 	.smg-rp-cat {
