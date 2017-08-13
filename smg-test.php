@@ -45,18 +45,18 @@ function smg_most_recent( $content ) {
         $recent_author_id   = get_post_field( 'post_author', $recent_post_id );
         $recent_author_name = get_the_author_meta( 'display_name', $recent_author_id );
 
-        $recent_timestamp   = human_time_diff( get_the_time('U', $recent_post_id ), current_time('timestamp') ) . ' ago';
+        $recent_timestamp   = human_time_diff( get_the_time( 'U', $recent_post_id ), current_time( 'timestamp' ) ) . ' ago';
 
         $recent_post_html = '
 
             <div class="smg-rp-container">
-                <span class="smg-img-container">' . get_the_post_thumbnail( $recent_post_id, 'smg_img') . '</span>
+                <span class="smg-img-container">' . get_the_post_thumbnail( $recent_post_id, 'smg_img' ) . '</span>
                 <div class="smg-rp-cat-container">
-                    <span class="smg-rp-cat">'  . $recent_cat . '</span>
+                    <span class="smg-rp-cat">' . $recent_cat . '</span>
                     <span class="smg-rp-time mobile-only"> | <i>' . $recent_timestamp  . '</i></span>
                 </div>
-                <span class="smg-rp-h1">'   . get_the_title( $recent_post_id ) . '</span>
-                <span class="smg-rp-meta tablet-up">By: <a href="'. get_author_posts_url( $recent_author_id ) .'">'. $recent_author_name .'</a> <i>'.  $recent_timestamp .'</i></span>
+                <span class="smg-rp-h1">' . get_the_title( $recent_post_id ) . '</span>
+                <span class="smg-rp-meta tablet-up">By: <a href="' . get_author_posts_url( $recent_author_id ) . '">' . $recent_author_name . '</a> <i>' .  $recent_timestamp . '</i></span>
             </div>
         ';
 
