@@ -1,6 +1,10 @@
 <?php
 /*
 Plugin Name: SMG Test
+Author: Evan Rose
+Author URI: http://evanrose.com
+Plugin URI: http://github.com/evanrose/smg-test
+Version: 1.0
 */
 
 /**
