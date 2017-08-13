@@ -31,34 +31,33 @@ function smg_most_recent( $content ) {
 
     if ( is_single() ) {
 
-        $recent_post_args   = array();
         $recent_post_args   = array(
-            'numberposts' => 1
+            'numberposts' => 1,
+            'post_status' => 'publish'
         );
 
-        $recent_post_array 	= wp_get_recent_posts();
-        $recent_post 		= $recent_post_array[0];
+        $recent_post        = wp_get_recent_posts( $recent_post_args, OBJECT );
+        $recent_post_id     = $recent_post[0]->ID;
 
-        $the_category_array = get_the_category( $recent_post['ID'] );
-        $the_category 		= $the_category_array[0]->cat_name;
+        $recent_cat_array   = get_the_category( $recent_post_id );
+        $recent_cat 		= $recent_cat_array[0]->cat_name;
 
-        $author_id          = get_post_field( 'post_author', $recent_post['ID'] );
-        $author_name        = get_the_author_meta( 'display_name', $author_id );
+        $recent_author_id   = get_post_field( 'post_author', $recent_post_id );
+        $recent_author_name = get_the_author_meta( 'display_name', $recent_author_id );
 
-        $timestamp          = human_time_diff( get_the_time('U', $recent_post['ID'] ), current_time('timestamp') ) . ' ago';
+        $recent_timestamp   = human_time_diff( get_the_time('U', $recent_post_id ), current_time('timestamp') ) . ' ago';
 
         $recent_post_html = '
 
             <div class="smg-rp-container">
-                <span class="smg-img-container">' . get_the_post_thumbnail( $recent_post['ID'], 'smg_img') . '</span>
+                <span class="smg-img-container">' . get_the_post_thumbnail( $recent_post_id, 'smg_img') . '</span>
                 <div class="smg-rp-cat-container">
-                    <span class="smg-rp-cat">'  . $the_category . '</span>
-                   <span class="smg-rp-time mobile-only"> | <i>' . $timestamp  . '</i></span>
+                    <span class="smg-rp-cat">'  . $recent_cat . '</span>
+                   <span class="smg-rp-time mobile-only"> | <i>' . $recent_timestamp  . '</i></span>
                 </div>
-                <span class="smg-rp-h1">'   . $recent_post['post_title'] . '</span>
-                <span class="smg-rp-meta tablet-up">By: <a href="'. get_author_posts_url( $author_id ) .'">'. $author_name .'</a> <i>'.  $timestamp .'</i></span>
+                <span class="smg-rp-h1">'   . get_the_title( $recent_post_id ) . '</span>
+                <span class="smg-rp-meta tablet-up">By: <a href="'. get_author_posts_url( $recent_author_id ) .'">'. $recent_author_name .'</a> <i>'.  $recent_timestamp .'</i></span>
             </div>
-
         ';
 
         $content .= $recent_post_html;
