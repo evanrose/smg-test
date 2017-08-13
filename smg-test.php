@@ -15,7 +15,7 @@ add_image_size( 'smg_img', 186, 150,  1 );
 
 function smg_load_css() {
     
-    if ( ! is_admin() ) {
+    if ( is_single() ) {
     	
     	$plugin_url = plugin_dir_url( __FILE__ );
     	wp_enqueue_style( 'smg_style', $plugin_url . 'css/style.css' );
