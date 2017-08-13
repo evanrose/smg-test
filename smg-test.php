@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: USA Today SMG Test
+Plugin Name: SMG Test
 */
 
 /**
