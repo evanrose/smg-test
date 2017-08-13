@@ -40,7 +40,7 @@ function smg_most_recent( $content ) {
         $recent_post_id     = $recent_post[0]->ID;
 
         $recent_cat_array   = get_the_category( $recent_post_id );
-        $recent_cat 		= $recent_cat_array[0]->cat_name;
+        $recent_cat         = $recent_cat_array[0]->cat_name;
 
         $recent_author_id   = get_post_field( 'post_author', $recent_post_id );
         $recent_author_name = get_the_author_meta( 'display_name', $recent_author_id );
