@@ -1,0 +1,116 @@
+.tablet-up {
+
+	display: none;
+}
+
+.smg_rp_container {
+
+	border: 1px solid #eee;
+	color: #bbb;
+	overflow: auto;
+	padding: 10px 20px 10px 20px;
+
+}
+
+.smg_img_container {
+
+	display: inline-block;
+	width: 100px;
+	margin: 0 15px 0 0;
+	overflow: hidden;
+	position: relative;
+	height: 100px;
+	float: left;
+	border-radius: 3px;
+}
+
+.smg_img_container img {
+
+    height: auto;
+    margin-left: -50%;
+    max-width: none;
+    width: auto;
+
+}
+
+.smg_rp_cat_container {
+
+	display: inline-block;
+	line-height: 12px;
+	vertical-align: top;
+}
+
+.smg_rp_cat {
+
+	font-size: 9px;	
+	font-weight: bold;
+	text-transform: uppercase;
+
+}
+
+.smg_rp_time {
+
+	color: #999;
+	font-size: 9px;
+}
+
+.smg_rp_h1 {
+
+	color: #333;
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1;
+}
+
+@media (min-width: 728px) { 
+
+	.smg_img_container {
+
+		height: 150px;
+		width: 186px;
+	}
+
+	.smg_img_container img {
+
+		left: 0;
+	    position: relative;
+	    top: 0;
+		margin-left: 0;
+	}
+
+	.mobile-only {
+
+		display: none;
+	}
+	
+	.tablet-up {
+
+		display: block;
+	}
+
+	.smg_rp_cat {
+
+		padding-top: 5px;
+	}
+
+	.smg_rp_h1 {
+
+		font-size: 26px;
+	}
+
+	.smg_rp_meta {
+
+		font-size: 13px;
+		line-height: 22px;
+		margin-top: 5px;
+	}
+
+	.smg_rp_meta a {
+
+		box-shadow: 0 -1px 0 red inset !important;
+		color: red;
+		text-decoration: red !important;
+	}
+
+}
