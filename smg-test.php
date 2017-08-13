@@ -36,9 +36,8 @@ function smg_most_recent( $content ) {
             'numberposts' => 1
         );
 
-
-		$recent_post_array 	= wp_get_recent_posts();
- 		$recent_post 		= $recent_post_array[0];
+        $recent_post_array 	= wp_get_recent_posts();
+        $recent_post 		= $recent_post_array[0];
 
         $the_category_array = get_the_category( $recent_post['ID'] );
         $the_category 		= $the_category_array[0]->cat_name;
@@ -50,14 +49,14 @@ function smg_most_recent( $content ) {
 
         $recent_post_html = '
 
-        	<div class="smg_rp_container">
-            <span class="smg-img-container">' . get_the_post_thumbnail( $recent_post['ID'], 'smg_img') . '</span>
-            <div class="smg-rp-cat-container">
-                <span class="smg-rp-cat">'  . $the_category . '</span>
-               <span class="smg-rp-time mobile-only"> | <i>' . $timestamp  . '</i></span>
-            </div>
-            <span class="smg-rp-h1">'   . $recent_post['post_title'] . '</span>
-            <span class="smg-rp-meta tablet-up">By: <a href="'. get_author_posts_url( $author_id ) .'">'. $author_name .'</a> <i>'.  $timestamp .'</i></span>
+            <div class="smg_rp_container">
+                <span class="smg-img-container">' . get_the_post_thumbnail( $recent_post['ID'], 'smg_img') . '</span>
+                <div class="smg-rp-cat-container">
+                    <span class="smg-rp-cat">'  . $the_category . '</span>
+                   <span class="smg-rp-time mobile-only"> | <i>' . $timestamp  . '</i></span>
+                </div>
+                <span class="smg-rp-h1">'   . $recent_post['post_title'] . '</span>
+                <span class="smg-rp-meta tablet-up">By: <a href="'. get_author_posts_url( $author_id ) .'">'. $author_name .'</a> <i>'.  $timestamp .'</i></span>
             </div>
 
         ';
