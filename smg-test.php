@@ -49,7 +49,7 @@ function smg_most_recent( $content ) {
 
         $recent_post_html = '
 
-            <div class="smg_rp_container">
+            <div class="smg-rp-container">
                 <span class="smg-img-container">' . get_the_post_thumbnail( $recent_post['ID'], 'smg_img') . '</span>
                 <div class="smg-rp-cat-container">
                     <span class="smg-rp-cat">'  . $the_category . '</span>
